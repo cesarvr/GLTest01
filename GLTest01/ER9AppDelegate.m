@@ -10,12 +10,19 @@
 
 @implementation ER9AppDelegate
 
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.controlador = [[ER9Controlador alloc]initWithNibName:@"ER9Controlador" bundle:nil];
+    self.window.rootViewController = self.controlador;
     [self.window makeKeyAndVisible];
+    
+    NSLog(@"controlador ok");
+    
     return YES;
 }
 
@@ -45,5 +52,6 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end

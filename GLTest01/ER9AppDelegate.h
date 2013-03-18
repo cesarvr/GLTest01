@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GLKit/GLKit.h>
+#import "ER9Controlador.h"
+#import "ER9PolyTestUno.h"
+
 
 @interface ER9AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) ER9Controlador *controlador;
 @end
